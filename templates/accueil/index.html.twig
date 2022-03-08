@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+    <!-- Business Presentation -->
+    <section id="Business" class="container-fluid">
+            <div class="container business shadow p-3 mb-5">
+                <div class="row d-flex align-items-center">
+                    <div class="col text-center textP">
+                        <h1>Entreprise Paradis</h1>
+                        <p class="pP">La boulangerie-pâtisserie Paradis à Metz, vous accueille chaleureusement au sein de sa boutique pour
+                            vous
+                            proposer chaque jour des pains frais et artisanaux ainsi que de délicieuses pâtisseries maison. Artisans
+                            boulangers et pâtissiers à Metz depuis 1956, nous mettons tout notre savoir-faire au service de vos
+                            papilles. Chaque matin, votre artisan boulanger réalise avec amour des pains maison à partir de farines
+                            de qualité.
+                        </p>
+                    </div>
+                    <div class="col ImgBus">
+                        <img src="{{asset('assets/image/Image1.png')}}" id="ImgBus" alt="Vendeuse Boulangerie">
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Product Overview -->
+    <section id="Product">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card content">
+                    <img src="{{asset('assets/image/1x/1x/Fichier 1.png')}}" class="card-img-top Product" id="ProdA" alt="Macarons">
+
+                    <div class="middle">
+                        <div class="text">Macarons</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col content">
+                <div class="card">
+                    <img src="{{asset('assets/image/1x/1x/Fichier 3.png')}}" class="card-img-top Product" alt="Cupcake Fraise">
+
+                    <div class="middle">
+                        <div class="text">Les Signatures</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col content">
+                <div class="card">
+                    <img src="{{asset('assets/image/1x/1x/Fichier 4.png')}}" class="card-img-top Product" alt="Eclair Fraise">
+
+                    <div class="middle">
+                        <div class="text">Réception Sucrée</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col content">
+                <div class="card">
+                    <img src="{{asset('assets/image/1x/1x/Fichier 2.png')}}" class="card-img-top Product" alt="Chocolats">
+
+                    <div class="middle">
+                        <div class="text">Chocolats</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col content">
+                <div class="card">
+                   <img src="{{asset('assets/image/1x/1x/Fichier 6.png')}}" class="card-img-top Product" id="cookie" alt="Paris Brest">
+
+                    <div class="middle">
+                        <div class="text">Les Grands Classiques</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col content">
+                <div class="card">
+                    <img src="{{asset('assets/image/1x/1x/Fichier 5.png')}}" class="card-img-top Product" alt="Aperitif Saumon">
+
+                    <div class="middle">
+                        <div class="text">Réception Salée</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
