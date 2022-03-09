@@ -4,6 +4,31 @@
 
 {% block body %}
 
+    <!-- Slider / Carousel -->
+    <section id="Carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">     
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1" class="active bg-primary"></button>              
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class="bg-primary"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="bg-primary"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{asset('assets/image/1x/Fichier 15.png')}}" class="d-block w-100" alt="Assemblage Patisserie">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="{{asset('assets/image/1x/Fichier 17.png')}}" class="d-block w-100" alt="Pain Rond">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="{{asset('assets/image/1x/Fichier 16.png')}}" class="d-block w-100 " alt="Café Croissant">
+                    </div>
+                </div>
+            </div>
+    </section>
+
     <!-- Business Presentation -->
     <section id="Business" class="container-fluid">
             <div class="container business shadow p-3 mb-5">
