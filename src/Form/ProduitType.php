@@ -31,6 +31,7 @@ class ProduitType extends AbstractType
                     ])
                 ],
             ])
+            ->add('category')
         ;
     }
 

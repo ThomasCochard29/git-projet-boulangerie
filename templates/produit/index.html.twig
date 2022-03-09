@@ -21,9 +21,9 @@
             <tr>
                 <td>{{ produit.id }}</td>
                 <td>{{ produit.Nom }}</td>
-                <td>{{ produit.Prix }}</td>
+                <td>{{ produit.Prix }} €</td>
                 <td>{{ produit.Image }}</td>
-                <td></td>
+                <td>{{ produit.category.nom }}</td>
 
                 <td>
                     <a href="{{ path('produit_show', {'id': produit.id}) }}" class="btn btn-primary">Show</a>
