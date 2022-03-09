@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+  <h1 class="text-center">{{controller_name}}</h1>
+
+  <div class="container mx-auto mt-3">
+    <div class="row">
+    {% for produits in produits %}
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+          <img src="uploads/{{produits.Image}}" class="card-img-top" alt="...">
+          
+          <div class="card-body">
+            <h5 class="card-title">{{produits.nom}}</h5>
+            <p class="card-text">{{produits.prix}}</p>
+          </div>
+        </div>
+      </div> 
+    {% endfor %}
+    </div> 
+  </div> 
+
+{% endblock %}
