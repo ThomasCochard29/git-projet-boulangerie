@@ -679,5 +679,13 @@ h1 {
     .DrapeauD {
         margin-top: -30px;
     }
+}
 
+/*! Page Contact  */
+
+#Business {
+    background-color: #de8700;
+    border-radius: 20px;
+    margin-top: 40px;
+    font-size: 1.44rem;
 }
