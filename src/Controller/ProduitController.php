@@ -16,6 +16,7 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 #[Route('/produit')]
 class ProduitController extends AbstractController
 {
+    //! Index
     #[Route('/', name: 'produit_index')]
     public function index(ProduitRepository $produitRepository): Response
     {
@@ -64,6 +65,7 @@ class ProduitController extends AbstractController
         ]);
     }
 
+    //! Show 
     #[Route('/{id}', name: 'produit_show', methods: ['GET'])]
     public function show(Produit $produit): Response
     {

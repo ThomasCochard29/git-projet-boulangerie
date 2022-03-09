@@ -23,7 +23,9 @@ class AccueilController extends AbstractController
     public function boulangerie(ProduitRepository $produitRepository): Response
     {
         return $this->render('prod/index.html.twig', [
-            'controller_name' => 'Produit',
+            'controller_macaron' => 'Macarons',
+            'controller_chocolat' => 'Chocolats',
+            'controller_confiserie' => 'Confiseries',
             'produits' => $produitRepository->findAll()
         ]);
     }
