@@ -9,14 +9,14 @@
 
   <div class="container mx-auto mt-3">
     <div class="row">
-    {% for produits in produits %}
+    {% for macaron in macarons %}
       <div class="col-md-3">
         <div class="card" style="width: 18rem;">
-          <img src="uploads/{{produits.Image}}" class="card-img-top" alt="...">
+          <img src="uploads/{{macaron.Image}}" class="card-img-top" alt="...">
           
           <div class="card-body">
-            <h5 class="card-title">{{produits.nom}}</h5>
-            <p class="card-text">{{produits.prix}}</p>
+            <h5 class="card-title">{{macaron.nom}}</h5>
+            <p class="card-text">{{macaron.prix}}</p>
           </div>
         </div>
       </div> 
@@ -29,14 +29,14 @@
 
   <div class="container mx-auto mt-3">
     <div class="row">
-    {% for produits in produits %}
+    {% for chocolat in chocolats %}
       <div class="col-md-3">
         <div class="card" style="width: 18rem;">
-          <img src="uploads/{{produits.Image}}" class="card-img-top" alt="...">
+          <img src="uploads/{{chocolat.Image}}" class="card-img-top" alt="...">
           
           <div class="card-body">
-            <h5 class="card-title">{{produits.nom}}</h5>
-            <p class="card-text">{{produits.prix}}</p>
+            <h5 class="card-title">{{chocolat.nom}}</h5>
+            <p class="card-text">{{chocolat.prix}}</p>
           </div>
         </div>
       </div> 
@@ -49,14 +49,14 @@
 
   <div class="container mx-auto mt-3">
     <div class="row">
-    {% for produits in produits %}
+    {% for confiserie in confiseries %}
       <div class="col-md-3">
         <div class="card" style="width: 18rem;">
-          <img src="uploads/{{produits.Image}}" class="card-img-top" alt="...">
+          <img src="uploads/{{confiserie.Image}}" class="card-img-top" alt="...">
           
           <div class="card-body">
-            <h5 class="card-title">{{produits.nom}}</h5>
-            <p class="card-text">{{produits.prix}}</p>
+            <h5 class="card-title">{{confiserie.nom}}</h5>
+            <p class="card-text">{{confiserie.prix}}</p>
           </div>
         </div>
       </div> 

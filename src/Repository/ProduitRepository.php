@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Category;
 use App\Entity\Produit;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -17,6 +18,48 @@ class ProduitRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Produit::class);
+    }
+
+    public function findMacaron(int $macaron): array
+    {
+        $entityManager = $this->getEntityManager();
+
+        $query = $entityManager->createQuery(
+            'SELECT p
+            FROM App\Entity\Produit p
+            WHERE p.category = :macaron'
+        )->setParameter('macaron', $macaron);
+
+        // returns an array of Product objects
+        return $query->getResult();
+    }
+
+    public function findChocolat(int $chocolat): array
+    {
+        $entityManager = $this->getEntityManager();
+
+        $query = $entityManager->createQuery(
+            'SELECT p
+            FROM App\Entity\Produit p
+            WHERE p.category = :chocolat'
+        )->setParameter('chocolat', $chocolat);
+
+        // returns an array of Product objects
+        return $query->getResult();
+    }
+
+    public function findConfiserie(int $confiserie): array
+    {
+        $entityManager = $this->getEntityManager();
+
+        $query = $entityManager->createQuery(
+            'SELECT p
+            FROM App\Entity\Produit p
+            WHERE p.category = :confiserie'
+        )->setParameter('confiserie', $confiserie);
+
+        // returns an array of Product objects
+        return $query->getResult();
     }
 
     // /**

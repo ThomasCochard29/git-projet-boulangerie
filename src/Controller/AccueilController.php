@@ -19,14 +19,20 @@ class AccueilController extends AbstractController
     }
 
     //! Page Des Produits
-    #[Route('/presProduit', name: 'presProduit', methods: ['GET'])]
+    #[Route('/Gourmandises', name: 'gourmandises', methods: ['GET'])]
     public function boulangerie(ProduitRepository $produitRepository): Response
     {
-        return $this->render('prod/index.html.twig', [
+        $macaron = 2;
+        $chocolat = 3;
+        $confiserie = 4;
+
+        return $this->render('gourmandises/index.html.twig', [
             'controller_macaron' => 'Macarons',
             'controller_chocolat' => 'Chocolats',
             'controller_confiserie' => 'Confiseries',
-            'produits' => $produitRepository->findAll()
+            'macarons' => $produitRepository->findMacaron($macaron),
+            'chocolats' => $produitRepository->findChocolat($chocolat),
+            'confiseries' => $produitRepository->findConfiserie($confiserie)
         ]);
     }
 

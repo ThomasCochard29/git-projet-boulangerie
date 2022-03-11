@@ -50,7 +50,7 @@ h1 {
 }
 
 .navbar {
-    font-size: 28px !important;
+    font-size: 22px !important;
 }
 
 #navbarNav {
@@ -116,7 +116,7 @@ h1 {
     background-color: #de8700;
     border-radius: 20px;
     margin-top: 40px;
-    font-size: 1.44rem;
+    font-size: 1.40rem;
 }
 
 #ImgBus {
@@ -178,7 +178,7 @@ h1 {
 .IconeR {
     position: relative;
     top: 32px;
-    left: 34rem;
+    left: 28rem;
     width: 40px;
     height: 40px;
 }
@@ -206,7 +206,7 @@ h1 {
     flex-direction: column;
     position: relative;
     top: -44px;
-    left: 38rem;
+    left: 30rem;
 }
 
 .Drapeau {
@@ -691,5 +691,5 @@ h1 {
     background-color: #de8700;
     border-radius: 20px;
     margin-top: 40px;
-    font-size: 1.44rem;
+    font-size: 1rem;
 }
