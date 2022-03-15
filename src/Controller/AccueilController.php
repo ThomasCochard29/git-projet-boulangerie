@@ -44,4 +44,13 @@ class AccueilController extends AbstractController
             'controller_name' => 'Contact',
         ]);
     }
+
+    //! Page Profil
+    #[Route('/profil', name: 'profil')]
+    public function indexProfile(): Response
+    {
+        return $this->render('profil/index.html.twig', [
+            'controller_name' => 'Ton Profil',
+        ]);
+    }
 }
