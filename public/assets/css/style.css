@@ -715,3 +715,46 @@ input, textarea {
     background-color: #00223a !important;
     border: 1px solid #de8700 !important;
 }
+
+/*! Page Profil */
+.cardC {
+    width: 350px;
+    background-color: #de8700;
+    border: 1px solid #625e5e !important;
+    cursor: pointer;
+    transition: all 0.5s
+}
+
+.image img {
+    transition: all 0.5s
+}
+
+.cardC:hover .image img {
+    transform: scale(1.5)
+}
+
+.btnB {
+    background-color: #00223a;
+    height: 140px;
+    width: 140px;
+    border-radius: 50%
+}
+
+.name {
+    font-size: 22px;
+    font-weight: bold
+}
+
+.idd {
+    font-size: 14px;
+    font-weight: 600
+}
+
+.btn1 {
+    height: 40px;
+    width: 150px;
+    border: none;
+    background-color: #00223a;
+    color: #aeaeae;
+    font-size: 15px
+}
