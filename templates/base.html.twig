@@ -21,7 +21,7 @@
         {# Nav Bar #}
         <nav class="navbar navbar-expand-lg navbar-light ">
             <div class="container-fluid">
-                <a href="#"><img src="{{asset('assets/image/LogoThomas.png')}}" alt="" class="Logo"></a>
+                <a href="{{path('accueil')}}"><img src="{{asset('assets/image/LogoThomas.png')}}" alt="" class="Logo"></a>
                 <div class="collapse navbar-collapse d-flex justify-content-end" id="toggleMobileMenu">
                     <ul class="navbar-nav navbar__links">
                         <li class="nav-item item navbar__link">
@@ -29,6 +29,7 @@
                         </li>
 
                         <ul class="navbar-nav item espace">
+                        {% if is_granted('ROLE_USER')%}
                             <li class="nav-item dropdown">
                                 <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gourmandises</a>
                                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
@@ -61,24 +62,46 @@
                                     <li><a class="dropdown-item" href="#">Commande</a></li>
                                 </ul>
                             </li>
+                        {% endif %}
+
+                        {% if is_granted('ROLE_ADMIN')%}
+                            <li class="nav-item dropdown calibrage navbar__link">
+                                <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin</a>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="{{path('produit_index')}}">Produits</a></li>
+                                    <li><a class="dropdown-item" href="{{path('category_index')}}">Category</a></li>
+                                    <li><a class="dropdown-item" href="{{path('user_index')}}">User</a></li>
+                                </ul>
+                            </li>
+                        {% endif %}
                         </ul>
 
                         <li class="nav-item item navbar__link" id="esp">
                             <a class="nav-link" href="{{path('contact')}}">Contact</a>
                         </li>
 
+                    {% if is_granted('ROLE_USER')%}
                         <li class="nav-item dropdown navbar__link">
                             <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img class="Icone" src="{{asset('assets/image/icons8-utilisateur-96.png')}}" alt=""></a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                <li><a class="dropdown-item" href="{{path('register')}}">Inscription</a></li>
-                                <li><a class="dropdown-item" href="{{path('login')}}">Connexion</a></li>
+                                <li><a class="dropdown-item" href="{{path('profil')}}">Profil</a></li>
                                 <li><a class="dropdown-item" href="{{path('logout')}}">Déconnexion</a></li>
                             </ul>
                         </li>
+                    {% else %}
+                        <li class="nav-item item navbar__link" id="esp">
+                            <a class="nav-link" href="{{path('register')}}">Inscription</a>
+                        </li>
+                        <li class="nav-item item navbar__link" id="esp">
+                            <a class="nav-link" href="{{path('login')}}">Connexion</a>
+                        </li>
+                    {% endif %}
 
+                    {% if is_granted('ROLE_USER')%}
                         <li class="nav-item navbar__link">
                             <a class="nav-link" href="#"><img class="Icone" src="{{asset('assets/image/icons8-panier-64.png')}}" alt=""></a>
                         </li>
+                    {% endif %}
                     </ul>
                 </div>
             </div>
