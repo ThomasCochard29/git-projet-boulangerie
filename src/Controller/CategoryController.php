@@ -27,10 +27,6 @@ class CategoryController extends AbstractController
     #[Route('/new', name: 'category_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
-        if($this->getUser()){
-            return $this->redirectToRoute('accueil');
-        }
-
         $category = new Category();
         $form = $this->createForm(CategoryType::class, $category);
         $form->handleRequest($request);
@@ -52,10 +48,6 @@ class CategoryController extends AbstractController
     #[Route('/{id}', name: 'category_show', methods: ['GET'])]
     public function show(Category $category): Response
     {
-        if($this->getUser()){
-            return $this->redirectToRoute('accueil');
-        }
-
         return $this->render('category/show.html.twig', [
             'category' => $category,
         ]);
@@ -65,10 +57,6 @@ class CategoryController extends AbstractController
     #[Route('/{id}/edit', name: 'category_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Category $category, EntityManagerInterface $entityManager): Response
     {
-        if($this->getUser()){
-            return $this->redirectToRoute('accueil');
-        }
-
         $form = $this->createForm(CategoryType::class, $category);
         $form->handleRequest($request);
 
@@ -88,10 +76,6 @@ class CategoryController extends AbstractController
     #[Route('/{id}', name: 'category_delete', methods: ['POST'])]
     public function delete(Request $request, Category $category, EntityManagerInterface $entityManager): Response
     {
-        if($this->getUser()){
-            return $this->redirectToRoute('accueil');
-        }
-        
         if ($this->isCsrfTokenValid('delete'.$category->getId(), $request->request->get('_token'))) {
             $entityManager->remove($category);
             $entityManager->flush();

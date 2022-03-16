@@ -20,47 +20,126 @@ class ProduitRepository extends ServiceEntityRepository
         parent::__construct($registry, Produit::class);
     }
 
-    public function findMacaron(int $macaron): array
-    {
-        $entityManager = $this->getEntityManager();
+    //! Requete Personnelle Pour Les Categories 
+        //? Requete Perso Macarons
+        public function findMacaron(int $macaron): array
+        {
+            $entityManager = $this->getEntityManager();
 
-        $query = $entityManager->createQuery(
-            'SELECT p
-            FROM App\Entity\Produit p
-            WHERE p.category = :macaron'
-        )->setParameter('macaron', $macaron);
+            $query = $entityManager->createQuery(
+                'SELECT p
+                FROM App\Entity\Produit p
+                WHERE p.category = :macaron'
+            )->setParameter('macaron', $macaron);
 
-        // returns an array of Product objects
-        return $query->getResult();
-    }
+            // returns an array of Product objects
+            return $query->getResult();
+        }
 
-    public function findChocolat(int $chocolat): array
-    {
-        $entityManager = $this->getEntityManager();
+        //? Requete Perso Chocolats
+        public function findChocolat(int $chocolat): array
+        {
+            $entityManager = $this->getEntityManager();
 
-        $query = $entityManager->createQuery(
-            'SELECT p
-            FROM App\Entity\Produit p
-            WHERE p.category = :chocolat'
-        )->setParameter('chocolat', $chocolat);
+            $query = $entityManager->createQuery(
+                'SELECT p
+                FROM App\Entity\Produit p
+                WHERE p.category = :chocolat'
+            )->setParameter('chocolat', $chocolat);
 
-        // returns an array of Product objects
-        return $query->getResult();
-    }
+            // returns an array of Product objects
+            return $query->getResult();
+        }
 
-    public function findConfiserie(int $confiserie): array
-    {
-        $entityManager = $this->getEntityManager();
+        //? Requete Perso Confiseries
+        public function findConfiserie(int $confiserie): array
+        {
+            $entityManager = $this->getEntityManager();
 
-        $query = $entityManager->createQuery(
-            'SELECT p
-            FROM App\Entity\Produit p
-            WHERE p.category = :confiserie'
-        )->setParameter('confiserie', $confiserie);
+            $query = $entityManager->createQuery(
+                'SELECT p
+                FROM App\Entity\Produit p
+                WHERE p.category = :confiserie'
+            )->setParameter('confiserie', $confiserie);
 
-        // returns an array of Product objects
-        return $query->getResult();
-    }
+            // returns an array of Product objects
+            return $query->getResult();
+        }
+
+        //? Requete Perso Boulangerie 
+        public function findBoulangerie(int $boulangerie): array
+        {
+            $entityManager = $this->getEntityManager();
+
+            $query = $entityManager->createQuery(
+                'SELECT p
+                FROM App\Entity\Produit p
+                WHERE p.category = :boulangerie'
+            )->setParameter('boulangerie', $boulangerie);
+
+            // returns an array of Product objects
+            return $query->getResult();
+        }
+
+        //? Requete Perso Les Grands Classiques
+        public function findGrandsClassiques(int $grandsClassique): array
+        {
+            $entityManager = $this->getEntityManager();
+
+            $query = $entityManager->createQuery(
+                'SELECT p
+                FROM App\Entity\Produit p
+                WHERE p.category = :grandsClassique'
+            )->setParameter('grandsClassique', $grandsClassique);
+
+            // returns an array of Product objects
+            return $query->getResult();
+        }
+
+        //? Requete Perso Les Signatures 
+        public function findSignatures(int $signature): array
+        {
+            $entityManager = $this->getEntityManager();
+
+            $query = $entityManager->createQuery(
+                'SELECT p
+                FROM App\Entity\Produit p
+                WHERE p.category = :signature'
+            )->setParameter('signature', $signature);
+
+            // returns an array of Product objects
+            return $query->getResult();
+        }
+
+        //? Requete Perso Réception Sucrée 
+        public function findSucre(int $sucre): array
+        {
+            $entityManager = $this->getEntityManager();
+
+            $query = $entityManager->createQuery(
+                'SELECT p
+                FROM App\Entity\Produit p
+                WHERE p.category = :sucre'
+            )->setParameter('sucre', $sucre);
+
+            // returns an array of Product objects
+            return $query->getResult();
+        }
+
+        //? Requete Perso Réception Salée 
+        public function findSalee(int $salee): array
+        {
+            $entityManager = $this->getEntityManager();
+
+            $query = $entityManager->createQuery(
+                'SELECT p
+                FROM App\Entity\Produit p
+                WHERE p.category = :salee'
+            )->setParameter('salee', $salee);
+
+            // returns an array of Product objects
+            return $query->getResult();
+        }
 
     // /**
     //  * @return Produit[] Returns an array of Produit objects
