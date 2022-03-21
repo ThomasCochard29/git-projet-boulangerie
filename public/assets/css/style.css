@@ -737,7 +737,13 @@ input, textarea {
     background-color: #00223a;
     height: 140px;
     width: 140px;
-    border-radius: 50%
+    border-radius: 50%;
+}
+
+#profil {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
 }
 
 .name {
