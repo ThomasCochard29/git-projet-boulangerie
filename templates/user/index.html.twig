@@ -14,7 +14,8 @@
                 <th>Nom</th>
                 <th>Prenom</th>
                 <th>Adresse</th>
-                <th>actions</th>
+                <th>Image</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -26,6 +27,7 @@
                 <td>{{ user.Nom }}</td>
                 <td>{{ user.Prenom }}</td>
                 <td>{{ user.Adresse }}</td>
+                <td><img src="{{asset('/uploads/'~user.image)}}" alt="" width="100px"></td>
                 <td>
                     <a href="{{ path('user_show', {'id': user.id}) }}" class="btn btn-primary">show</a>
                     <a href="{{ path('user_edit', {'id': user.id}) }}" class="btn btn-primary">edit</a>

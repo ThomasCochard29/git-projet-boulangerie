@@ -3,9 +3,11 @@
 namespace App\Form;
 
 use App\Entity\User;
+use Symfony\Component\Validator\Constraints\File;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\CallbackTransformer;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -22,6 +24,21 @@ class UserType extends AbstractType
                 'choices'  => [
                   'User' => 'ROLE_USER',
                   'Admin' => 'ROLE_ADMIN',
+                ],
+            ])
+            ->add('image', FileType::class, [
+                'label' => 'Photo',
+                'mapped' => false,
+                'required' => false,
+                'constraints' => [
+                    new File([
+                        'maxSize' => '10240k',
+                        'mimeTypes' => [
+                            'image/jpeg',
+                            'image/png'
+                        ],
+                        'mimeTypesMessage' => 'Veuillez insérer un jpeg ou un png uniquement'
+                    ])
                 ],
             ])
             ->add('password')

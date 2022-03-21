@@ -31,6 +31,10 @@
                 <th>Adresse</th>
                 <td>{{ user.Adresse }}</td>
             </tr>
+            <tr>
+                <th>Image</th>
+                <td><img src="{{asset('/uploads/'~user.image)}}" alt="" width="100px"></td>
+            </tr>
         </tbody>
     </table>
 
