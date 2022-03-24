@@ -4,6 +4,14 @@
 
 {% block body %}
 
+  <div class="container">
+    {% for message in app.flashes('success') %}
+      <div class="alert alert-success">
+        {{ message }}
+      </div>
+    {% endfor %}
+  </div>
+
   <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
     <div class="cardC p-4">
         <div class=" image d-flex flex-column justify-content-center align-items-center">
@@ -16,7 +24,7 @@
           <span class="idd">{{ app.user.adresse }}</span>
 
           <div class=" d-flex mt-2">
-            <a href="#"><button class="btn1">Edit Profile</button></a>
+            <a href="{{path('edit_profil', {'id': app.user.id})}}"><button class="btn1">Edit Profile</button></a>
           </div>
         </div>
     </div>
