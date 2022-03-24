@@ -729,8 +729,8 @@ input, textarea {
     transition: all 0.5s
 }
 
-.cardC:hover .image img {
-    transform: scale(1.5)
+.cardC:hover .image .btnB {
+    transform: scale(1.2);
 }
 
 .btnB {
