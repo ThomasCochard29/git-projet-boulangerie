@@ -50,7 +50,7 @@ class AccueilController extends AbstractController
                 'controller_signature' => 'Signatures',
                 'controller_grandsClassique' => 'Grands Classiques',
                 'boulangeries' => $produitRepository->findBoulangerie($boulangerie),
-                'signatures' => $produitRepository->findSignature($signature),
+                'signatures' => $produitRepository->findSignatures($signature),
                 'grandsClassiques' => $produitRepository->findGrandsClassiques($grandsClassique)
             ]);
         }
@@ -65,8 +65,8 @@ class AccueilController extends AbstractController
             return $this->render('traiteurs/index.html.twig', [
                 'controller_recepsucre' => 'Réception Sucrée',
                 'controller_recepsalee' => 'Réception Salée',
-                'sucre' => $produitRepository->findSucre($sucre),
-                'salee' => $produitRepository->findSalee($salee)
+                'sucres' => $produitRepository->findSucre($sucre),
+                'salees' => $produitRepository->findSalee($salee)
             ]);
         }
 

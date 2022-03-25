@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+  {#! Réception Sucrée #}
+  <p class="text-center h1">{{controller_recepsucre}}</p>
+
+  <div class="container mx-auto mt-3">
+    <div class="row">
+    {% for sucre in sucres %}
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+          <img src="uploads/{{sucre.Image}}" class="card-img-top" alt="...">
+          
+          <div class="card-body">
+            <h5 class="card-title">{{sucre.nom}}</h5>
+            <p class="card-text">{{sucre.prix}}</p>
+          </div>
+        </div>
+      </div> 
+    {% endfor %}
+    </div> 
+  </div> 
+
+  {#! Réception Salée #}
+  <p class="text-center h1">{{controller_recepsalee}}</p>
+
+  <div class="container mx-auto mt-3">
+    <div class="row">
+    {% for salee in salees %}
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+          <img src="uploads/{{salee.Image}}" class="card-img-top" alt="...">
+          
+          <div class="card-body">
+            <h5 class="card-title">{{salee.nom}}</h5>
+            <p class="card-text">{{salee.prix}}</p>
+          </div>
+        </div>
+      </div> 
+    {% endfor %}
+    </div> 
+  </div>
+
+{% endblock %}
