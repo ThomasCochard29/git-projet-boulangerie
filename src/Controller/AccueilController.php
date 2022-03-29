@@ -87,4 +87,11 @@ class AccueilController extends AbstractController
             'controller_name' => 'Ton Profil',
         ]);
     }
+
+    //! Page Mentions Légales
+    #[Route('/mention_legale', name: 'mention_legale')]
+    public function indexMentionLegale(): Response
+    {
+        return $this->render('mention_legale/index.html.twig');
+    }
 }

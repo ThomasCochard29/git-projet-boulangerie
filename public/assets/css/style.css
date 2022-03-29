@@ -19,6 +19,7 @@ a {
 
 h1 {
     font-family: Ananda Regular;
+    color: white;
 }
 
 .h1 {
@@ -127,6 +128,7 @@ h1 {
 .card {
     width: 80%;
     margin-left: 16%;
+    border: 2px black solid;
 }
 
 #Product {
@@ -694,6 +696,10 @@ h1 {
     font-size: 1rem;
 }
 
+label {
+    color: #de8700;
+}
+
 /*! Page Register/Login */
 
 .connect {
@@ -714,6 +720,7 @@ h1 {
 input, textarea {
     background-color: #00223a !important;
     border: 1px solid #de8700 !important;
+    color: #de8700 !important;
 }
 
 /*! Page Profil */
@@ -763,4 +770,24 @@ input, textarea {
     background-color: #00223a;
     color: #aeaeae;
     font-size: 15px
+}
+
+/*! Page Mentions Légales */
+.mention_leg, .mention_leg>a {
+    color: white !important;
+}
+
+/*! Page Admin */
+    /*? Produit */
+    table {
+        color: white !important;
+    }
+
+/*! Bootstrap */
+.btn {
+    color: #de8700 !important;
+}
+
+.form-control {
+    color: #de8700 !important;
 }
