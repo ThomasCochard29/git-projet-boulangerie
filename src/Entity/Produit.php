@@ -26,6 +26,9 @@ class Produit
     #[ORM\JoinColumn(nullable: false)]
     private $category;
 
+    #[ORM\Column(type: 'integer')]
+    private $qte_stock;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -75,6 +78,18 @@ class Produit
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getQteStock(): ?int
+    {
+        return $this->qte_stock;
+    }
+
+    public function setQteStock(int $qte_stock): self
+    {
+        $this->qte_stock = $qte_stock;
 
         return $this;
     }

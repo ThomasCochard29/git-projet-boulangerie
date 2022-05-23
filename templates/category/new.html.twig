@@ -3,6 +3,7 @@
 {% block title %}New Category{% endblock %}
 
 {% block body %}
+<section class="newBody">
     <h1 class="text-center">Create new Category</h1>
 
     {{ include('category/_form.html.twig') }}
@@ -10,4 +11,5 @@
     <div class="container">
         <a href="{{ path('category_index') }}" class="btn btn-primary">back to list</a>
     </div>
+</section>
 {% endblock %}

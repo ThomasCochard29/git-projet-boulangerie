@@ -21,18 +21,20 @@ class ProduitRepository extends ServiceEntityRepository
     }
 
     //! Requete Personnelle Pour Les Categories 
-        //? Requete Perso Macarons
+        //? Requete Perso Macarons    
         public function findMacaron(int $macaron): array
         {
+            // Requete SQL
             $entityManager = $this->getEntityManager();
 
+            // On récupère la catégorie Macarons
             $query = $entityManager->createQuery(
-                'SELECT p
-                FROM App\Entity\Produit p
-                WHERE p.category = :macaron'
-            )->setParameter('macaron', $macaron);
+                'SELECT p -- SELECTION DES PRODUITS
+                FROM App\Entity\Produit p -- DE LA TABLE PRODUIT
+                WHERE p.category = :macaron -- WHERE LA CATEGORIE EST MACARON' 
+            )->setParameter('macaron', $macaron); // On passe la valeur de la categorie 
 
-            // returns an array of Product objects
+            // On récupère les résultats de la requete
             return $query->getResult();
         }
 

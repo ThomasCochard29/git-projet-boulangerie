@@ -11,12 +11,12 @@
     <div class="row">
     {% for macaron in macarons %}
       <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-          <img src="uploads/{{macaron.Image}}" class="card-img-top" alt="...">
+        <div class="card" style="width: 16rem;">
+          <img src="uploads/{{macaron.Image}}" class="card-img-top" alt="{{macaron.nom}}">
           
-          <div class="card-body">
-            <h5 class="card-title">{{macaron.nom}}</h5>
-            <p class="card-text">{{macaron.prix}}</p>
+          <div class="card-body" style="background: #00223a; color: #de8700;">
+            <h5 class="card-title text-center">{{macaron.nom}}</h5>
+            <p class="card-text text-center">{{macaron.prix}} €</p>
           </div>
         </div>
       </div> 

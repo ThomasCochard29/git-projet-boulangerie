@@ -32,6 +32,11 @@ security:
                 login_path: login
                 check_path: login
 
+            # configure the maximum login attempts in a custom period of time
+            login_throttling:
+                max_attempts: 3
+                interval: '10 minutes'
+
             logout:
                 path: logout
 
@@ -39,7 +44,7 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         - { path: ^/(produit|category|user), roles: ROLE_ADMIN }
-        - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/(profil|Gourmandises|Produits|Traiteurs), roles: ROLE_USER }
 
 when@test:
     security:

@@ -4,65 +4,67 @@
 
 {% block body %}
 
-  {#! Boulangeries #}
-  <p class="text-center h1">{{controller_boulangerie}}</p>
+  <section class="produitBody">
+    {#! Boulangeries #}
+    <p class="text-center h1">{{controller_boulangerie}}</p>
 
-  <div class="container mx-auto mt-3">
-    <div class="row">
-    {% for boulangerie in boulangeries %}
-      <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-          <img src="uploads/{{boulangerie.Image}}" class="card-img-top" alt="...">
-          
-          <div class="card-body">
-            <h5 class="card-title">{{boulangerie.nom}}</h5>
-            <p class="card-text">{{boulangerie.prix}}</p>
+    <div class="container mx-auto mt-3">
+      <div class="row">
+      {% for boulangerie in boulangeries %}
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src="uploads/{{boulangerie.Image}}" class="card-img-top" alt="...">
+            
+            <div class="card-body">
+              <h5 class="card-title">{{boulangerie.nom}}</h5>
+              <p class="card-text">{{boulangerie.prix}}</p>
+            </div>
           </div>
-        </div>
+        </div> 
+      {% endfor %}
       </div> 
-    {% endfor %}
     </div> 
-  </div> 
 
-  {#! Signatures #}
-  <p class="text-center h1">{{controller_signature}}</p>
+    {#! Signatures #}
+    <p class="text-center h1">{{controller_signature}}</p>
 
-  <div class="container mx-auto mt-3">
-    <div class="row">
-    {% for signature in signatures %}
-      <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-          <img src="uploads/{{signature.Image}}" class="card-img-top" alt="...">
-          
-          <div class="card-body">
-            <h5 class="card-title">{{signature.nom}}</h5>
-            <p class="card-text">{{signature.prix}}</p>
+    <div class="container mx-auto mt-3">
+      <div class="row">
+      {% for signature in signatures %}
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src="uploads/{{signature.Image}}" class="card-img-top" alt="...">
+            
+            <div class="card-body">
+              <h5 class="card-title">{{signature.nom}}</h5>
+              <p class="card-text">{{signature.prix}}</p>
+            </div>
           </div>
-        </div>
+        </div> 
+      {% endfor %}
       </div> 
-    {% endfor %}
     </div> 
-  </div> 
 
-  {#! grandsClassiques #}
-  <p class="text-center h1">{{controller_grandsClassique}}</p>
+    {#! grandsClassiques #}
+    <p class="text-center h1">{{controller_grandsClassique}}</p>
 
-  <div class="container mx-auto mt-3">
-    <div class="row">
-    {% for grandsClassique in grandsClassiques %}
-      <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-          <img src="uploads/{{grandsClassique.Image}}" class="card-img-top" alt="...">
-          
-          <div class="card-body">
-            <h5 class="card-title">{{grandsClassique.nom}}</h5>
-            <p class="card-text">{{grandsClassique.prix}}</p>
+    <div class="container mx-auto mt-3">
+      <div class="row">
+      {% for grandsClassique in grandsClassiques %}
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src="uploads/{{grandsClassique.Image}}" class="card-img-top" alt="...">
+            
+            <div class="card-body">
+              <h5 class="card-title">{{grandsClassique.nom}}</h5>
+              <p class="card-text">{{grandsClassique.prix}}</p>
+            </div>
           </div>
-        </div>
+        </div> 
+      {% endfor %}
       </div> 
-    {% endfor %}
-    </div> 
-  </div> 
+    </div>
+  </section>
 
 
 {% endblock %}

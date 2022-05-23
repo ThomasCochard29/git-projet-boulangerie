@@ -3,6 +3,7 @@
 {% block title %}New Produit{% endblock %}
 
 {% block body %}
+<section class="newBody">
     <h1 class="text-center">New Produit</h1>
 
     {{ include('produit/_form.html.twig') }}
@@ -10,4 +11,5 @@
     <div class="container">
         <a href="{{ path('produit_index') }}" class="btn btn-primary">Liste des Produits</a>
     </div>
+</section>
 {% endblock %}

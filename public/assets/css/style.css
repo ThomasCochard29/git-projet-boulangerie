@@ -5,6 +5,7 @@
 
 body {
     background-color: #00223a !important;
+    
 }
 
 section {
@@ -26,29 +27,34 @@ h1 {
     font-family: Ananda Regular;
 }
 
-/* NavBar / Icone */
-.Logo {
-    width: 126px;
-    margin: 20px;
-    margin-left: 40%;
-    transition: all 1.4s ease-out;
-}
+/*! Barre de navigation */
 
-.Icone {
-    width: 40px;
-    height: 40px;
-}
+    /*? Couleur et police de la barre de navigation et du footer */
+    .navbar,
+    .Footer {
+        background-color: #de8700;
+        font-size: 20px;
+        font-family: Canto Brush Open;
+    }
 
-.item {
-    margin-top: 8px;
-}
+    /*? Logo de l'entreprise  */
+    .Logo {
+        width: 126px;
+        margin: 20px;
+        margin-left: 40%;
+        transition: all 1.4s ease-out;
+    }
 
-.navbar,
-.Footer {
-    background-color: #de8700;
-    font-size: 20px;
-    font-family: Canto Brush Open;
-}
+    /*? Icone du profil et du panier   */
+    .Icone {
+        width: 40px;
+        height: 40px;
+    }
+
+    /*? Nom du menu */ 
+    .item {
+        margin-top: 8px;
+    }
 
 .navbar {
     font-size: 22px !important;
@@ -492,6 +498,11 @@ h1 {
         height: 4px;
     }
 
+    /* Gourmandise Product */
+    .card {
+        width: 10% !important;
+    }
+
     /* Footer */
     .pF {
         font-size: 10px;
@@ -687,6 +698,16 @@ h1 {
     }
 }
 
+/*! Page Produits */
+.produitBody {
+    min-height: 70.9vh !important;
+}
+
+/*! Page Traiteur */
+.traiteurBody {
+    min-height: 70.9vh !important;
+}
+
 /*! Page Contact  */
 
 #Business {
@@ -724,12 +745,17 @@ input, textarea {
 }
 
 /*! Page Profil */
+.profilBody {
+    min-height: 69.4vh !important;
+}
+
 .cardC {
     width: 350px;
     background-color: #de8700;
     border: 1px solid #625e5e !important;
     cursor: pointer;
-    transition: all 0.5s
+    transition: all 0.5s;
+    max-height: 40vh;
 }
 
 .image img {
@@ -755,12 +781,12 @@ input, textarea {
 
 .name {
     font-size: 22px;
-    font-weight: bold
+    font-weight: bold;
 }
 
 .idd {
     font-size: 14px;
-    font-weight: 600
+    font-weight: 600;
 }
 
 .btn1 {
@@ -769,7 +795,7 @@ input, textarea {
     border: none;
     background-color: #00223a;
     color: #aeaeae;
-    font-size: 15px
+    font-size: 15px;
 }
 
 /*! Page Mentions Légales */
@@ -778,6 +804,22 @@ input, textarea {
 }
 
 /*! Page Admin */
+    .adminBody {
+        min-height: 60.6vh !important;
+    }
+
+    .newBody {
+        min-height: 70.9vh !important;
+    }
+
+    .editBody {
+        min-height: 70.9vh !important;
+    }
+
+    .showBody {
+        min-height: 70.9vh !important;
+    }
+    
     /*? Produit */
     table {
         color: white !important;
