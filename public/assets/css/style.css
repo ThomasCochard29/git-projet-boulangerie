@@ -834,6 +834,16 @@ input, textarea {
         color: white !important;
     }
 
+/*! Page Click And Collect */
+.clcBody {
+    min-height: 63.7vh !important;
+}
+
+/*! Page Panier */
+.panierBody {
+    min-height: 63.7vh !important;
+}
+
 /*! Bootstrap */
 .btn {
     color: white !important;
