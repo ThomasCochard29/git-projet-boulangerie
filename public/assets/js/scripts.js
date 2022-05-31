@@ -10,3 +10,5 @@ function toggleMenu () {
         navbar.classList.toggle('show-nav');
     });    
 }
+
+toggleMenu();

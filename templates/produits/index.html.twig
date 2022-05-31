@@ -12,12 +12,12 @@
       <div class="row">
       {% for boulangerie in boulangeries %}
         <div class="col-md-3">
-          <div class="card" style="width: 18rem;">
+          <div class="card" style="width: 16rem;">
             <img src="uploads/{{boulangerie.Image}}" class="card-img-top" alt="...">
             
-            <div class="card-body">
+            <div class="card-body" style="background: #00223a; color: #de8700;">
               <h5 class="card-title">{{boulangerie.nom}}</h5>
-              <p class="card-text">{{boulangerie.prix}}</p>
+              <p class="card-text">{{boulangerie.prix}} €</p>
             </div>
           </div>
         </div> 
@@ -32,12 +32,12 @@
       <div class="row">
       {% for signature in signatures %}
         <div class="col-md-3">
-          <div class="card" style="width: 18rem;">
+          <div class="card" style="width: 16rem;">
             <img src="uploads/{{signature.Image}}" class="card-img-top" alt="...">
             
-            <div class="card-body">
+            <div class="card-body" style="background: #00223a; color: #de8700;">
               <h5 class="card-title">{{signature.nom}}</h5>
-              <p class="card-text">{{signature.prix}}</p>
+              <p class="card-text">{{signature.prix}} €</p>
             </div>
           </div>
         </div> 
@@ -52,12 +52,12 @@
       <div class="row">
       {% for grandsClassique in grandsClassiques %}
         <div class="col-md-3">
-          <div class="card" style="width: 18rem;">
+          <div class="card" style="width: 16rem;">
             <img src="uploads/{{grandsClassique.Image}}" class="card-img-top" alt="...">
             
-            <div class="card-body">
+            <div class="card-body" style="background: #00223a; color: #de8700;">
               <h5 class="card-title">{{grandsClassique.nom}}</h5>
-              <p class="card-text">{{grandsClassique.prix}}</p>
+              <p class="card-text">{{grandsClassique.prix}} €</p>
             </div>
           </div>
         </div> 

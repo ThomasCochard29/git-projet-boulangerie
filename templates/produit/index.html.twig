@@ -1,12 +1,19 @@
+{#! Extension du template base #}
 {% extends 'base.html.twig' %}
 
+{#! Titre de l'onglet  #}
 {% block title %}Produit index{% endblock %}
 
 {% block body %}
+
+    {#! Titre de la page #}
     <h1 class="text-center">Produit index</h1>
 
+    {#! Table contenant tous les produits #}
     <table class="table adminBody container">
         <thead>
+
+        {#! Nom des colonnes du tableau #}
             <tr>
                 <th>Id</th>
                 <th>Nom</th>
@@ -17,6 +24,8 @@
             </tr>
         </thead>
         <tbody>
+
+        {#! Boucle d'affichage pour les produits #}
         {% for produit in produits %}
             <tr>
                 <td>{{ produit.id }}</td>
@@ -25,11 +34,14 @@
                 <td>{{ produit.Image }}</td>
                 <td>{{ produit.category.nom }}</td>
 
+                {#! Bouton pour Edit et Show #}
                 <td>
                     <a href="{{ path('produit_show', {'id': produit.id}) }}" class="btn btn-primary">Show</a>
                     <a href="{{ path('produit_edit', {'id': produit.id}) }}" class="btn btn-primary">Edit</a>
                 </td>
             </tr>
+
+        {#! Affichage si aucun produit présent dans la base de données #}
         {% else %}
             <tr>
                 <td colspan="5">Pas de Produit Enregistrer</td>
@@ -38,6 +50,7 @@
         </tbody>
     </table>
 
+    {#! Bouton pour ajouter un produit #}
     <div class="container">
         <a href="{{ path('produit_new') }}" class="btn btn-primary">New Produit</a>
     </div>

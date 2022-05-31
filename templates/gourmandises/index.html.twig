@@ -31,12 +31,12 @@
     <div class="row">
     {% for chocolat in chocolats %}
       <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 16rem;">
           <img src="uploads/{{chocolat.Image}}" class="card-img-top" alt="...">
           
-          <div class="card-body">
+          <div class="card-body" style="background: #00223a; color: #de8700;">
             <h5 class="card-title">{{chocolat.nom}}</h5>
-            <p class="card-text">{{chocolat.prix}}</p>
+            <p class="card-text">{{chocolat.prix}} €</p>
           </div>
         </div>
       </div> 
@@ -51,12 +51,12 @@
     <div class="row">
     {% for confiserie in confiseries %}
       <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 16rem;">
           <img src="uploads/{{confiserie.Image}}" class="card-img-top" alt="...">
           
-          <div class="card-body">
+          <div class="card-body" style="background: #00223a; color: #de8700;">
             <h5 class="card-title">{{confiserie.nom}}</h5>
-            <p class="card-text">{{confiserie.prix}}</p>
+            <p class="card-text">{{confiserie.prix}} €</p>
           </div>
         </div>
       </div> 
