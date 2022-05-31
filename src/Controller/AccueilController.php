@@ -94,4 +94,18 @@ class AccueilController extends AbstractController
     {
         return $this->render('mention_legale/index.html.twig');
     }
+
+    //! Page Click and Collect
+    #[Route('/click_and_collect', name: 'click_and_collect')]
+    public function indexClickAndCollect(): Response
+    {
+        return $this->render('click_and_collect/index.html.twig');
+    }
+
+    //! Page Panier
+    #[Route('/panier', name: 'panier')]
+    public function indexPanier(): Response
+    {
+        return $this->render('panier/index.html.twig');
+    }
 }

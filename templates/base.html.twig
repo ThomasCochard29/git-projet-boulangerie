@@ -31,7 +31,7 @@
                         <ul class="navbar-nav item espace">
                         {% if is_granted('ROLE_USER')%}
                             <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gourmandises</a>
+                                <a class="nav-link" href="{{path('gourmandises')}}" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gourmandises</a>
                                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                                     <li><a class="dropdown-item" href="{{path('gourmandises')}}">Macarons</a></li>
                                     <li><a class="dropdown-item" href="{{path('gourmandises')}}">Chocolats</a></li>
@@ -57,9 +57,9 @@
                             </li>
 
                             <li class="nav-item dropdown calibrage navbar__link">
-                                <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Click & Collect</a>
+                                <a class="nav-link" href="{{path('click_and_collect')}}" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Click & Collect</a>
                                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">Commande</a></li>
+                                    <li><a class="dropdown-item" href="{{path('click_and_collect')}}">Commande</a></li>
                                 </ul>
                             </li>
                         {% endif %}
@@ -99,7 +99,7 @@
 
                     {% if is_granted('ROLE_USER')%}
                         <li class="nav-item navbar__link">
-                            <a class="nav-link" href="#"><img class="Icone" src="{{asset('assets/image/icons8-panier-64.png')}}" alt=""></a>
+                            <a class="nav-link" href="{{path('panier')}}"><img class="Icone" src="{{asset('assets/image/icons8-panier-64.png')}}" alt=""></a>
                         </li>
                     {% endif %}
                     </ul>
