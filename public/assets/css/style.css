@@ -5,8 +5,7 @@
 
 body {
     background-color: #00223a !important;
-    
-}
+}   
 
 section {
     margin: 10px;
@@ -26,6 +25,30 @@ h1 {
 .h1 {
     font-family: Ananda Regular;
 }
+
+/*! ScrollBar */
+body::-webkit-scrollbar-track {
+    background-color: #de8700;
+}
+
+    /*? Taille / Couleur Barre de Scroll */
+    body::-webkit-scrollbar {
+        width: 16px;
+        background-color: #de8700;
+    }
+
+    /*? Couleur Barre de Scroll */
+    body::-webkit-scrollbar-thumb {
+        background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.30, #625e5e),
+        color-stop(0.52, #625e5e),
+        color-stop(0.86, #625e5e)
+        );
+    }
+
 
 /*! Barre de navigation */
 
@@ -111,7 +134,8 @@ h1 {
 /* Carousel */
 #Carousel {
     margin: -1px;
-    margin-top: -50px;
+    margin-top: -42px;
+    margin-right: 0px;
 }
 
 .button {
@@ -186,24 +210,9 @@ h1 {
 .IconeR {
     position: relative;
     top: 32px;
-    left: 28rem;
+    left: 22rem;
     width: 40px;
     height: 40px;
-}
-
-.Facebook:hover{
-    width: 60px;
-    height: 60px;
-}
-
-.Instagram:hover {
-    width: 60px;
-    height: 60px;
-}
-
-.Youtube:hover {
-    width: 60px;
-    height: 60px;
 }
 
 /* Langue */
@@ -214,7 +223,7 @@ h1 {
     flex-direction: column;
     position: relative;
     top: -44px;
-    left: 30rem;
+    left: 26rem;
 }
 
 .Drapeau {
@@ -755,7 +764,7 @@ input, textarea {
     border: 1px solid #625e5e !important;
     cursor: pointer;
     transition: all 0.5s;
-    max-height: 40vh;
+    max-height: 50vh;
 }
 
 .image img {
@@ -827,7 +836,7 @@ input, textarea {
 
 /*! Bootstrap */
 .btn {
-    color: #de8700 !important;
+    color: white !important;
 }
 
 .form-control {
